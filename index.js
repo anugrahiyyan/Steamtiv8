@@ -1,78 +1,74 @@
 let libraryData = [
     {
+        id: 1,
         namaGame: 'hallo',
         harga: 10000,
-        genre: 'fps'
+        genre: 'fps',
     },
-    {
+    {   
+        id: 2,
         namaGame: 'doto',
         harga: 20000,
-        genre: 'rts'
+        genre: 'rts',
     },
     {
+        id: 3,
         namaGame: 'volaran',
         harga: 40000,
-        genre: 'fps'
+        genre: 'fps',
     },
     {
+        id: 4,
         namaGame: 'simkota',
         harga: 50000,
-        genre: 'sim'
+        genre: 'sim',
     },
     {
+        id: 5,
         namaGame: 'hancurpermen',
         harga: 100000,
         genre: 'casual'
     },
 ]
 
-let userData = {
-    nama: 'jeni',
-    uang: 500000,
-    cart: ['hancurpermen', 'simkota']
-    
-}
+let cart = []
 
-function Cart(user, library) {
+function nambahCart(input, library) {
     let result = []
 
-    for(let i = 0; i < user.cart.length; i++) {
-        for(let j = 0; j < library.length; j++) {
-            if(user.cart[i] === library[j].namaGame) {
-                result.push(library[j])
-            }
+    for(let i = 0; i < library.length; i++) {
+        if(input === library[i].id) {
+            result.push({
+                id: library[i].id,
+                nama: library[i].namaGame,
+                harga: library[i].harga
+            })
         }
     }
+
     return result
 }
 
-function hitungHarga(cart) {
-    let result = 0
+// console.log(nambahCart(3, libraryData))
+
+
+let cart1 = [
+    { id: 3, nama: 'volaran', harga: 40000 },
+    { id: 5, nama: 'hancurpermen', harga: 100000 },
+    { id: 1, nama: 'hallo', harga: 10000 },
+    { id: 3, nama: 'volaran', harga: 40000 },
+]
+
+
+function deleteItemCart(input, cart) {
 
     for(let i = 0; i < cart.length; i++) {
-        result += cart[i].harga
+        if(input === cart[i].id) {
+            cart.splice(i, 1)
+        }
     }
-
-    return result
+    
+    return cart 
 }
 
-function checkout(user, library) {
-    let result = {}
-
-    let userCart = Cart(user, library)
-    let tagihan = hitungHarga(userCart)
-    let belanjaan = []
-
-    for(let i = 0; i < userCart.length; i ++) {
-        belanjaan.push(userCart[i].namaGame)
-    }
-    result = {
-        nama: user.nama,
-        tagihan: tagihan,
-        games: belanjaan,
-    }
-
-    return result
-}
-
-console.log(checkout(userData,libraryData))
+// console.log(deleteItemCart(3, cart1))
