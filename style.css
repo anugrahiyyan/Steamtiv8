@@ -38,6 +38,13 @@ nav h1 {
 	color: white;
 }
 
+h5 {
+	font-family: 'Silk', cursive;
+	font-weight: small;
+	font-size: 20px;
+	color: rgb(156, 136, 136);
+}
+
 .content-body span {
 	font-size: 25px;
 	font-weight: bold !important;
