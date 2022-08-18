@@ -2,13 +2,13 @@ let storeData = [
     {
         id: 1,
         namaGame: 'hallo',
-        harga: 10000,
+        harga: 120000,
         genre: 'fps',
     },
     {   
         id: 2,
         namaGame: 'doto',
-        harga: 20000,
+        harga: 720000,
         genre: 'rts',
     },
     {
@@ -145,5 +145,36 @@ function filterGame(filter, input, store) {
 
 
 // console.log(filterGame("genre", "fps", storeData))
+
+function sortGame(sortType, from, store) {
+    let temp = []
+
+    if(from === 'low') {
+        for(let i = 1; i < store.length; i++) {
+            for(let j = 0; j < i ; j++) {
+                if(store[j][sortType] > store[i][sortType]) {
+                    temp = store[j]
+                    store[j] = store[i]
+                    store[i] = temp
+                }
+            }
+        }
+    } else if(from === 'high') {
+        for(let i = 1; i < store.length; i++) {
+            for(let j = 0; j < i ; j++) {
+                if(store[j][sortType] < store[i][sortType]) {
+                    temp = store[j]
+                    store[j] = store[i]
+                    store[i] = temp
+                }
+            }
+        }
+    }
+
+    return store
+}
+
+
+// console.log(sortGame('harga', 'high', storeData))
 
 
