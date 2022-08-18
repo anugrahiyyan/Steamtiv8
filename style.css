@@ -32,6 +32,12 @@ main {
 	color: white;
 }
 
+nav h1 {
+	font-family: 'Silkscreen', cursive;
+	font-weight: normal;
+	color: white;
+}
+
 .content-body span {
 	font-size: 25px;
 	font-weight: bold !important;
