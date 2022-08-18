@@ -130,3 +130,20 @@ function searchGame(input ,store) {
 
 // console.log(searchGame('volaran', storeData))
 
+function filterGame(filter, input, store) {
+    let result = []
+
+    for(let i = 0; i < store.length; i++) {
+        if(input === store[i][filter]) {
+            result.push(store[i])
+        }
+    }
+
+    return result
+    
+}
+
+
+// console.log(filterGame("genre", "fps", storeData))
+
+
