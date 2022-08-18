@@ -52,12 +52,12 @@ function nambahCart(input, store) {
 // console.log(nambahCart(3, storeData))
 
 
-let cart1 = [
-    { id: 3, nama: 'volaran', harga: 40000 },
-    { id: 5, nama: 'hancurpermen', harga: 100000 },
-    { id: 1, nama: 'hallo', harga: 10000 },
-    { id: 3, nama: 'volaran', harga: 40000 },
-]
+// let cart1 = [
+//     { id: 3, nama: 'volaran', harga: 40000 },
+//     { id: 5, nama: 'hancurpermen', harga: 100000 },
+//     { id: 1, nama: 'hallo', harga: 10000 },
+//     { id: 3, nama: 'volaran', harga: 40000 },
+// ]
 
 
 function deleteItemCart(input, cart) {
@@ -109,5 +109,24 @@ function checkout(cart) {
     return result
 }
 
-console.log(checkout(cart1))
+// console.log(checkout(cart1))
+
+
+function searchGame(input ,store) {
+    let result = []
+
+    for(let i = 0; i < store.length; i++) {
+        if(input === store[i].namaGame) {
+            result.push(store[i])
+        }
+    }
+
+    if(result.length <= 0) {
+        return 'not found'
+    }
+
+    return result
+}
+
+// console.log(searchGame('volaran', storeData))
 
