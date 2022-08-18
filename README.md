@@ -1,4 +1,4 @@
 # Steamtiv8
 Hackathon
 
-Membuat aplikasi website semacam pemesanan jual beli game
+Membuat aplikasi website semacam pemesanan pembelian game
