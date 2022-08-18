@@ -1,4 +1,4 @@
-let libraryData = [
+let storeData = [
     {
         id: 1,
         namaGame: 'hallo',
@@ -33,15 +33,15 @@ let libraryData = [
 
 let cart = []
 
-function nambahCart(input, library) {
+function nambahCart(input, store) {
     let result = []
 
-    for(let i = 0; i < library.length; i++) {
-        if(input === library[i].id) {
+    for(let i = 0; i < store.length; i++) {
+        if(input === store[i].id) {
             result.push({
-                id: library[i].id,
-                nama: library[i].namaGame,
-                harga: library[i].harga
+                id: store[i].id,
+                nama: store[i].namaGame,
+                harga: store[i].harga
             })
         }
     }
@@ -49,7 +49,7 @@ function nambahCart(input, library) {
     return result
 }
 
-// console.log(nambahCart(3, libraryData))
+// console.log(nambahCart(3, storeData))
 
 
 let cart1 = [
@@ -65,6 +65,7 @@ function deleteItemCart(input, cart) {
     for(let i = 0; i < cart.length; i++) {
         if(input === cart[i].id) {
             cart.splice(i, 1)
+            break
         }
     }
     
@@ -72,3 +73,41 @@ function deleteItemCart(input, cart) {
 }
 
 // console.log(deleteItemCart(3, cart1))
+
+
+function hitungHarga(cart) {
+    let result = 0
+
+    for(let i = 0; i < cart.length; i++) {
+        result += cart[i].harga
+    }
+
+    return result
+    
+}
+
+// console.log(hitungHarga(cart1))
+
+function checkout(cart) { 
+    let result = {
+        games: {},
+        tagihan: 0
+    }
+
+    let tagihan = hitungHarga(cart)
+
+    for(let i = 0; i < cart.length; i++) {
+        if(!result.games[cart[i].nama]) {
+            result.games[cart[i].nama] = 0
+        }
+        result.games[cart[i].nama]++
+    }
+
+    result.tagihan = tagihan
+
+
+    return result
+}
+
+console.log(checkout(cart1))
+
