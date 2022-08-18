@@ -1,1 +1,108 @@
-css file
+html, body {
+	background-color: whitesmoke;
+	background-image: url(./images/bg1.png);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+}
+
+main {
+	background-color: #fffa;
+}
+.header-top {
+	padding: 10px;
+	margin: 5px;
+	background-color: none;
+	position: relative;
+	z-index: 1px;
+	min-width: 940px;
+}
+
+.header-top .content {
+	background-color: black;
+	box-sizing: border-box;
+	padding: 0px;
+	margin: 0px;
+	position: relative;
+}
+
+.header-top .content h1 {
+	font-family: 'Silkscreen', cursive;
+	font-weight: normal;
+	color: white;
+}
+
+.content-body span {
+	font-size: 25px;
+	font-weight: bold !important;
+	margin: 1px;
+	padding: 1px;
+}
+
+.container-flex .content-nav {
+	box-sizing: border-box;
+	margin: 1em;
+	padding: 2em;
+	text-align: center;
+	justify-content: space-around;
+	display: flex;
+	height: none;
+}
+
+.content-nav ul li {
+	font-size: 15px;
+	font-family: 'open sans' sans-serif;
+	border-radius: 1em;
+	padding: 1em;
+	margin: 1em;
+	background-color: #fffa;
+	text-decoration: none;
+	list-style: none;
+	backdrop-filter: blur(10px) saturate(150%) contrast(180%);
+	-webkit-backdrop-filter: blur(10px) saturate(150%) contrast(180%);
+}
+
+ul > li > a {
+	color: black;
+	text-decoration: none;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+
+.wrapper {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 10px;
+	grid-auto-rows: minmax(100px, auto);
+	border-style:dotted;
+  }
+  .one {
+	grid-column: 1 / 3;
+	grid-row: 1 / 5;
+	border-style:dotted;
+  }
+  	.list {
+		background-color: blue;
+	}
+  .two {
+	grid-column: 1 / 3;
+	grid-row: 2 / 3;
+	border-style:dotted;
+  }
+  .three {
+	grid-column: 1/ 3;
+	grid-row: 3 / 3;
+	border-style:dotted;
+  }
+  .four {
+	grid-column: 1/ 3;
+	grid-row: 4/ 4;
+	border-style:dotted;
+  }
+  .five {
+	grid-column: 3/ 3;
+	grid-row: 2/ 5;
+	border-style:dotted;
+  }
+
