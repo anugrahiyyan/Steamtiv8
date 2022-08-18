@@ -33,6 +33,7 @@ let storeData = [
 
 let cart = []
 
+//input = id data game di storeData yang ingin ditambahkan ke cart
 function nambahCart(input, store) {
     let result = []
 
@@ -60,6 +61,7 @@ function nambahCart(input, store) {
 // ]
 
 
+//input = data id game dari cart yang ingin dihapus
 function deleteItemCart(input, cart) {
 
     for(let i = 0; i < cart.length; i++) {
