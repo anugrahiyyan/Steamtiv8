@@ -6,6 +6,7 @@
 	<title>Welcome to Steamtiv8</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 	<!-- MADE BY TEAM 3 -->
 	<!-- THANKS TO CONTRIBUTOR -->
 	<!-- (TRI BUONO ASTO, ZIANURRAHMANI, A. LATIF, NURKHALISH LUTFI, RINA DAHLIA, IYYAN ANUGRAH) -->
@@ -17,38 +18,215 @@
 		</div>
 	</div>
 <main>
-	<div class="content-body">
-		<div>
-			<span>Now available on Steamtiv8</span>
-		</div>
-	</div>
-	<div class="container-flex content-nav content-body">
-		<div class="container-flex">
-			<div class="content-nav">
-				<ul>
-					<li><a href="#">Store</a></li>
-					<li><a href="#">Cart</a></li>
-					<li><a href="#">Checkout</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<div class="wrapper">
-		<div class="one">
-			<p>list game</p>
-			<ul class="list">
-				<li>arcade</li>
-				<li>adventure</li>
-				<li>RPG</li>
-			</ul>
-		</div>
-		<div class="two">game ke 1</div>
-		<div class="three">game ke 2</div>
-		<div class="four">game ke 3</div>
-		<div class="five">chart</div>
+	<nav class="navbar navbar-expand-lg bg-light">
+	  <div class="container-fluid">
+	    <a class="navbar-brand" href="#">Steamtiv8</a>
+	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	      <span class="navbar-toggler-icon"></span>
+	    </button>
+	    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+	        <li class="nav-item">
+	          <a class="nav-link active" aria-current="page" href="#">Home</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="#">Store</a>
+	        </li>
+	        <li class="nav-item dropdown">
+	          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+	            List
+	          </a>
+	          <ul class="dropdown-menu">
+	            <li><a class="dropdown-item" href="#">Cart</a></li>
+	            <li><a class="dropdown-item" href="#">Checkout</a></li>
+	            <li><hr class="dropdown-divider"></li>
+	            <li><a class="dropdown-item" href="login.html">Login</a></li>
+	          </ul>
+	        </li>
+	      </ul>
+	      <form class="d-flex" role="search">
+	        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+	        <button class="btn btn-outline-success" type="submit">Search</button>
+	      </form>
+	    </div>
 	  </div>
+	</nav>
+
+	<div class="card">
+	  <h5 class="card-header">Featured & Recommended</h5>
+	  	<section class="overlay">
+	      <h1 id="message"></h1>
+	      <h3>WELCOME TO Steamtiv8.</h3>
+	    </section>
+		<div class="col-md-4">
+			<img src="./images/dota.jpeg" class="img-fluid rounded-start" alt="images-rpg">
+		  <div class="card-body">
+		    <h5 class="card-title">DOTO</h5>
+		    <p class="card-text">Dota 2 adalah sebuah permainan arena pertarungan daring multipemain, dan merupakan sekuel dari Defense of the Ancients mod pada Warcraft 3: Reign of Chaos dan Warcraft 3: The Frozen Throne.</p>
+		    <p class="card-text"><small class="text-muted">RTS GAME</small></p>
+		    <a href="#" class="btn btn-primary">BUY</a>
+		  </div>
+		  </div>
+	</div>
+
+	<div class="card text-center">
+		<div class="card-header">
+		  <ul class="nav nav-tabs card-header-tabs">
+			<li class="nav-item">
+			  <a class="nav-link active" aria-current="true" href="#">FPS</a>
+			  <div class="card mb-3" style="max-width: 540px;">
+				<div class="row g-0">
+				  <div class="col-md-4">
+					<img src="https://media.istockphoto.com/vectors/indonesia-independence-day-vector-id1157925883?b=1&k=20&m=1157925883&s=170667a&w=0&h=I1GbhpEU_2AHNb5OA44lujW1oJ_rQHw6K634whAT5VY=" class="img-fluid rounded-start" alt="...">
+				  </div>
+				  <div class="col-md-8">
+					<div class="card-body">
+					  <h5 class="card-title">Hallo</h5>
+					  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+					  <a href="#" class="btn btn-primary">BUY</a>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			  <div class="card mb-3" style="max-width: 540px;">
+				<div class="row g-0">
+				  <div class="col-md-4">
+					<img src="https://png.pngtree.com/png-clipart/20210801/original/pngtree-lomba-makan-kerupuk-hari-kemerdekaan-indonesia-png-image_6590456.jpg" class="img-fluid rounded-start" alt="...">
+				  </div>
+				  <div class="col-md-8">
+					<div class="card-body">
+					  <h5 class="card-title">Volaran</h5>
+					  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+					  <a href="#" class="btn btn-primary">BUY</a>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			  <div class="card mb-3" style="max-width: 540px;">
+				<div class="row g-0">
+				  <div class="col-md-4">
+					<img src="https://thumbs.dreamstime.com/b/indonesia-traditional-games-independence-day-children-racing-inside-sack-to-competition-each-other-celebration-freedom-151386054.jpg" class="img-fluid rounded-start" alt="...">
+				  </div>
+				  <div class="col-md-8">
+					<div class="card-body">
+					  <h5 class="card-title">Modern Combat 5: Blackout //test</h5>
+					  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+					  <a href="#" class="btn btn-primary">BUY</a>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link active" aria-current="true" href="#">RTS</a>
+			  <div class="card mb-3" style="max-width: 540px;">
+				<div class="row g-0">
+				  <div class="col-md-4">
+					<img src="./images/dota.jpeg" class="img-fluid rounded-start" alt="images-doto">
+				  </div>
+				  <div class="col-md-8">
+					<div class="card-body">
+					  <h5 class="card-title">DOTO 3</h5>
+					  <p class="card-text">Dota 2 adalah sebuah permainan arena pertarungan daring multipemain.</p>
+					  <a href="#" class="btn btn-primary">BUY</a>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			  <div class="card mb-3" style="max-width: 540px;">
+				<div class="row g-0">
+				  <div class="col-md-4">
+					<img src="..." class="img-fluid rounded-start" alt="...">
+				  </div>
+				  <div class="col-md-8">
+					<div class="card-body">
+					  <h5 class="card-title">Company of Heroes //test</h5>
+					  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+					  <a href="#" class="btn btn-primary">BUY</a>	
+					</div>
+				  </div>
+				</div>
+			  </div>
+			  <div class="card mb-3" style="max-width: 540px;">
+				<div class="row g-0">
+				  <div class="col-md-4">
+					<img src="..." class="img-fluid rounded-start" alt="...">
+				  </div>
+				  <div class="col-md-8">
+					<div class="card-body">
+					  <h5 class="card-title">Ages of Empires //test</h5>
+					  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+					  <a href="#" class="btn btn-primary">BUY</a>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link active" aria-current="true" href="#">Casual</a>
+			  <div class="card mb-3" style="max-width: 540px;">
+				<div class="row g-0">
+				  <div class="col-md-4">
+					<img src="..." class="img-fluid rounded-start" alt="...">
+				  </div>
+				  <div class="col-md-8">
+					<div class="card-body">
+					  <h5 class="card-title">Hancur Permen</h5>
+					  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+					  <a href="#" class="btn btn-primary">BUY</a>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</li>
+		  </ul>
+		</div>
+	</div>
+
 </main>
 <script src="index.js"></script>
+<script src="loginges.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 </html>
-cd
+
+<!-- 
+<div class="info">
+		<div class="app_name">
+			<div>Farthest Frontier</div>
+		</div>
+		<div class="screenshots">
+			<div>
+				<div data-background-image-url="https://cdn.akamai.steamstatic.com/steam/apps/1044720/ss_a8bc77cfb2f5184b70e5eeefbe6d0cb23219cbba.600x338.jpg" style="background-image: url(&quot;https://cdn.akamai.steamstatic.com/steam/apps/1044720/ss_a8bc77cfb2f5184b70e5eeefbe6d0cb23219cbba.600x338.jpg&quot;);">
+					
+				</div>
+			</div>
+			<div>
+				<div data-background-image-url="https://cdn.akamai.steamstatic.com/steam/apps/1044720/ss_e1ccf51e3f514b8cd74566dc4f5733127f2bfc85.600x338.jpg" style="background-image: url(&quot;https://cdn.akamai.steamstatic.com/steam/apps/1044720/ss_e1ccf51e3f514b8cd74566dc4f5733127f2bfc85.600x338.jpg&quot;);">
+					
+				</div>
+			</div>
+			<div>
+				<div data-background-image-url="https://cdn.akamai.steamstatic.com/steam/apps/1044720/ss_f046aa92e9897bb54a9da2cebc37fb54009b2d24.600x338.jpg" style="background-image: url(&quot;https://cdn.akamai.steamstatic.com/steam/apps/1044720/ss_f046aa92e9897bb54a9da2cebc37fb54009b2d24.600x338.jpg&quot;);">
+					
+				</div>
+			</div>
+			<div>
+				<div data-background-image-url="https://cdn.akamai.steamstatic.com/steam/apps/1044720/ss_691b312ec962a150ea807fc28e896b8bf08d941c.600x338.jpg" style="background-image: url(&quot;https://cdn.akamai.steamstatic.com/steam/apps/1044720/ss_691b312ec962a150ea807fc28e896b8bf08d941c.600x338.jpg&quot;);">
+					
+				</div>
+			</div>
+		</div>
+		<div class="reason">
+			<div class="main default">Early Access Now Available</div>
+			<div class="additional">
+				<div>Top Seller</div>
+			</div>
+		</div>
+		<div class="discount_block  no_discount discount_block_inline" data-price-final="13999900">
+			<div class="discount_prices">
+				<div class="discount_final_price">Rp 139 999</div>
+			</div>
+		</div>
+		<div class="platforms"><span class="platform_img win"></span></div>
+	</div> -->
