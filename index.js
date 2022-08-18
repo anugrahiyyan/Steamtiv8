@@ -88,6 +88,7 @@ function hitungHarga(cart) {
 
 // console.log(hitungHarga(cart1))
 
+
 function checkout(cart) { 
     let result = {
         games: {},
@@ -112,6 +113,7 @@ function checkout(cart) {
 // console.log(checkout(cart1))
 
 
+// input = nama game yang di cari
 function searchGame(input ,store) {
     let result = []
 
@@ -130,6 +132,9 @@ function searchGame(input ,store) {
 
 // console.log(searchGame('volaran', storeData))
 
+
+// filter = key yang ingin di filter 
+// input = apa yang ingin di filter
 function filterGame(filter, input, store) {
     let result = []
 
@@ -146,6 +151,9 @@ function filterGame(filter, input, store) {
 
 // console.log(filterGame("genre", "fps", storeData))
 
+
+// sortType = key data store yang ingin di sort (harga, namaGame, id, etc)
+// from = dari low atau high mulaonya
 function sortGame(sortType, from, store) {
     let temp = []
 
@@ -174,7 +182,6 @@ function sortGame(sortType, from, store) {
     return store
 }
 
-
-// console.log(sortGame('harga', 'high', storeData))
+// console.log(sortGame('harga', 'low', storeData))
 
 
