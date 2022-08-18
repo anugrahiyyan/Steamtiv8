@@ -53,12 +53,12 @@ function nambahCart(input, store) {
 // console.log(nambahCart(3, storeData))
 
 
-// let cart1 = [
-//     { id: 3, nama: 'volaran', harga: 40000 },
-//     { id: 5, nama: 'hancurpermen', harga: 100000 },
-//     { id: 1, nama: 'hallo', harga: 10000 },
-//     { id: 3, nama: 'volaran', harga: 40000 },
-// ]
+let cart1 = [
+    { id: 3, nama: 'volaran', harga: 40000 },
+    { id: 5, nama: 'hancurpermen', harga: 100000 },
+    { id: 1, nama: 'hallo', harga: 10000 },
+    { id: 3, nama: 'volaran', harga: 40000 },
+]
 
 
 //input = data id game dari cart yang ingin dihapus
@@ -107,12 +107,12 @@ function checkout(cart) {
     }
 
     result.tagihan = tagihan
-
+    result.resi = generateResi()
 
     return result
 }
 
-// console.log(checkout(cart1))
+console.log(checkout(cart1))
 
 
 // input = nama game yang di cari
@@ -187,3 +187,17 @@ function sortGame(sortType, from, store) {
 // console.log(sortGame('harga', 'low', storeData))
 
 
+function generateResi() {
+    let result = ""
+    let karakter = `0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ`
+    let panjangResi = 10
+
+    for (let i = 0; i < panjangResi; i++) {
+        result += karakter[(Math.floor(Math.random() * karakter.length))];
+    }
+
+    return result
+
+}
+
+// console.log(generateResi())
