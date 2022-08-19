@@ -237,9 +237,9 @@ function filterGenre() {
     let filteredGenre = {}
     for(let i = 0; i < storeData.length; i++) {
         if(!filteredGenre[storeData[i].genre]) {
-            filteredGenre[storeData[i].genre] = {}
+            filteredGenre[storeData[i].genre] = []
         }
-        filteredGenre[storeData[i].genre] = storeData[i]
+        filteredGenre[storeData[i].genre].push(storeData[i])
         
     }
 
@@ -247,7 +247,7 @@ function filterGenre() {
 
 }
 
-// console.log(filterGenre())
+console.log(filterGenre())
 
 
 let filtered = []
