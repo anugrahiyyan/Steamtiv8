@@ -71,15 +71,15 @@ function nambahCart(input) {
     }
 }
 
-// console.log(nambahCart(3, storeData))
+// console.log(nambahCart(3))
 
 
-// let cart1 = [
-//     { id: 3, nama: 'volaran', harga: 40000 },
-//     { id: 5, nama: 'hancurpermen', harga: 100000 },
-//     { id: 1, nama: 'hallo', harga: 10000 },
-//     { id: 3, nama: 'volaran', harga: 40000 },
-// ]
+let cart1 = [
+    { id: 3, nama: 'volaran', harga: 40000 },
+    { id: 5, nama: 'hancurpermen', harga: 100000 },
+    { id: 1, nama: 'hallo', harga: 10000 },
+    { id: 3, nama: 'volaran', harga: 40000 },
+]
 
 
 //input = data id game dari cart yang ingin dihapus
@@ -146,12 +146,12 @@ function checkout(cart) {
 
 
 // input = nama game yang di cari
-function searchGame(input ,store) {
+function searchGame(input) {
     let result = []
 
-    for(let i = 0; i < store.length; i++) {
-        if(input === store[i].namaGame) {
-            result.push(store[i])
+    for(let i = 0; i < storeData.length; i++) {
+        if(input === storeData[i].namaGame) {
+            result.push(storeData[i])
         }
     }
 
@@ -162,17 +162,17 @@ function searchGame(input ,store) {
     return result
 }
 
-// console.log(searchGame('volaran', storeData))
+// console.log(searchGame('volaran'))
 
 
 // filter = key yang ingin di filter 
 // input = apa yang ingin di filter
-function filterGame(filter, input, store) {
+function filterGame(filter, input) {
     let result = []
 
-    for(let i = 0; i < store.length; i++) {
-        if(input === store[i][filter]) {
-            result.push(store[i])
+    for(let i = 0; i < storeData.length; i++) {
+        if(input === storeData[i][filter]) {
+            result.push(storeData[i])
         }
     }
 
@@ -181,40 +181,40 @@ function filterGame(filter, input, store) {
 }
 
 
-// console.log(filterGame("genre", "fps", storeData))
+// console.log(filterGame("genre", "fps"))
 
 
 // sortType = key data store yang ingin di sort (harga, namaGame, id, etc)
 // from = dari low atau high mulaonya
-function sortGame(sortType, from, store) {
+function sortGame(sortType, from) {
     let temp = []
 
     if(from === 'low') {
-        for(let i = 1; i < store.length; i++) {
+        for(let i = 1; i < storeData.length; i++) {
             for(let j = 0; j < i ; j++) {
-                if(store[j][sortType] > store[i][sortType]) {
-                    temp = store[j]
-                    store[j] = store[i]
-                    store[i] = temp
+                if(storeData[j][sortType] > storeData[i][sortType]) {
+                    temp = storeData[j]
+                    storeData[j] = storeData[i]
+                    storeData[i] = temp
                 }
             }
         }
     } else if(from === 'high') {
-        for(let i = 1; i < store.length; i++) {
+        for(let i = 1; i < storeData.length; i++) {
             for(let j = 0; j < i ; j++) {
-                if(store[j][sortType] < store[i][sortType]) {
-                    temp = store[j]
-                    store[j] = store[i]
-                    store[i] = temp
+                if(storeData[j][sortType] < storeData[i][sortType]) {
+                    temp = storeData[j]
+                    storeData[j] = storeData[i]
+                    storeData[i] = temp
                 }
             }
         }
     }
 
-    return store
+    return storeData
 }
 
-// console.log(sortGame('harga', 'low', storeData))
+// console.log(sortGame('harga', 'low'))
 
 
 function generateResi() {
