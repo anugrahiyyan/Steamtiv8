@@ -232,3 +232,80 @@ function generateResi() {
 }
 
 // console.log(generateResi())
+
+let filtered = []
+
+let filter = () => {
+   let input = document.getElementById('input').value;
+   filtered = storeData.filter(item => item.namaGame.toLowerCase().includes(input.toLowerCase()))
+   render()
+};
+
+let render = () => {
+      let list = document.getElementById('list')
+      if (filtered.length > 0) {
+        list.innerHTML = ''
+        filtered.forEach(el => {
+          list.innerHTML += `
+            <div class="card" style="width: 18rem;">
+              <img src="${el.img}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">${el.namaGame}</h5>
+                <p class="card-text">${el.harga}</p>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal${el.id}">Buy</button>
+              </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal${el.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">${el.namaGame}</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    ...
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `
+        })
+      } else {
+        storeData.forEach(el => {
+          list.innerHTML += `
+            <div class="card" style="width: 18rem;">
+              <img src="${el.img}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">${el.namaGame}</h5>
+                <p class="card-text">${el.harga}</p>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal${el.id}">Buy</button>
+              </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal${el.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">${el.namaGame}</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    ...
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `
+        })
+      }
+    }
+render()

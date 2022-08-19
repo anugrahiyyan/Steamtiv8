@@ -45,7 +45,7 @@
 	        </li>
 	      </ul>
 	      <form class="d-flex" role="search">
-	        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+	        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search" id="input" onchange="filter()"/>
 	        <button class="btn btn-outline-success" type="submit">Search</button>
 	      </form>
 	    </div>
@@ -58,16 +58,19 @@
 	      <h1 id="message"></h1>
 	      <h3>WELCOME TO Steamtiv8.</h3>
 	    </section>
+
 		<div class="col-md-4">
 			<img src="./images/dota.jpeg" class="img-fluid rounded-start" alt="images-rpg">
-		  <div class="card-body">
-		    <h5 class="card-title">DOTO</h5>
-		    <p class="card-text">Dota 2 adalah sebuah permainan arena pertarungan daring multipemain, dan merupakan sekuel dari Defense of the Ancients mod pada Warcraft 3: Reign of Chaos dan Warcraft 3: The Frozen Throne.</p>
-		    <p class="card-text"><small class="text-muted">RTS GAME</small></p>
-		    <a href="#" class="btn btn-primary" id="buyButton2"  onclick="nambahCart(2)">BUY</a>
-		  </div>
-		  </div>
+			  <div class="card-body">
+			    <h5 class="card-title">DOTO</h5>
+			    <p class="card-text">Dota 2 adalah sebuah permainan arena pertarungan daring multipemain, dan merupakan sekuel dari Defense of the Ancients mod pada Warcraft 3: Reign of Chaos dan Warcraft 3: The Frozen Throne.</p>
+			    <p class="card-text"><small class="text-muted">RTS GAME</small></p>
+			    <a href="#" class="btn btn-primary" id="buyButton2"  onclick="nambahCart(2)">BUY</a>
+			  </div>
+		</div>
 	</div>
+
+	<div id="list"></div>
 
 	<div class="card text-center">
 		<div class="card-header">
@@ -109,7 +112,7 @@
 				  </div>
 				  <div class="col-md-8">
 					<div class="card-body">
-					  <h5 class="card-title">Modern Combat 5: Blackout //test</h5>
+					  <h5 class="card-title">Modern Combat 5: Blackout</h5>
 					  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 					  <a href="#" class="btn btn-primary" id="buyButton6" onclick="nambahCart(6)">BUY</a>
 					</div>
@@ -140,7 +143,7 @@
 				  </div>
 				  <div class="col-md-8">
 					<div class="card-body">
-					  <h5 class="card-title">Company of Heroes //test</h5>
+					  <h5 class="card-title">Company of Heroes</h5>
 					  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 					  <a href="#" class="btn btn-primary" id="buyButton8" onclick="nambahCart(8)">BUY</a>	
 					</div>
@@ -154,7 +157,7 @@
 				  </div>
 				  <div class="col-md-8">
 					<div class="card-body">
-					  <h5 class="card-title">Ages of Empires //test</h5>
+					  <h5 class="card-title">Ages of Empires</h5>
 					  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 					  <a href="#" class="btn btn-primary" id="buyButton9" onclick="nambahCart(9)">BUY</a>
 					</div>
@@ -189,44 +192,3 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 </html>
-
-<!-- 
-<div class="info">
-		<div class="app_name">
-			<div>Farthest Frontier</div>
-		</div>
-		<div class="screenshots">
-			<div>
-				<div data-background-image-url="https://cdn.akamai.steamstatic.com/steam/apps/1044720/ss_a8bc77cfb2f5184b70e5eeefbe6d0cb23219cbba.600x338.jpg" style="background-image: url(&quot;https://cdn.akamai.steamstatic.com/steam/apps/1044720/ss_a8bc77cfb2f5184b70e5eeefbe6d0cb23219cbba.600x338.jpg&quot;);">
-					
-				</div>
-			</div>
-			<div>
-				<div data-background-image-url="https://cdn.akamai.steamstatic.com/steam/apps/1044720/ss_e1ccf51e3f514b8cd74566dc4f5733127f2bfc85.600x338.jpg" style="background-image: url(&quot;https://cdn.akamai.steamstatic.com/steam/apps/1044720/ss_e1ccf51e3f514b8cd74566dc4f5733127f2bfc85.600x338.jpg&quot;);">
-					
-				</div>
-			</div>
-			<div>
-				<div data-background-image-url="https://cdn.akamai.steamstatic.com/steam/apps/1044720/ss_f046aa92e9897bb54a9da2cebc37fb54009b2d24.600x338.jpg" style="background-image: url(&quot;https://cdn.akamai.steamstatic.com/steam/apps/1044720/ss_f046aa92e9897bb54a9da2cebc37fb54009b2d24.600x338.jpg&quot;);">
-					
-				</div>
-			</div>
-			<div>
-				<div data-background-image-url="https://cdn.akamai.steamstatic.com/steam/apps/1044720/ss_691b312ec962a150ea807fc28e896b8bf08d941c.600x338.jpg" style="background-image: url(&quot;https://cdn.akamai.steamstatic.com/steam/apps/1044720/ss_691b312ec962a150ea807fc28e896b8bf08d941c.600x338.jpg&quot;);">
-					
-				</div>
-			</div>
-		</div>
-		<div class="reason">
-			<div class="main default">Early Access Now Available</div>
-			<div class="additional">
-				<div>Top Seller</div>
-			</div>
-		</div>
-		<div class="discount_block  no_discount discount_block_inline" data-price-final="13999900">
-			<div class="discount_prices">
-				<div class="discount_final_price">Rp 139 999</div>
-			</div>
-		</div>
-		<div class="platforms"><span class="platform_img win"></span></div>
-	</div> -->
