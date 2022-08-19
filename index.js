@@ -131,9 +131,10 @@ function checkout(cart) {
 
     for(let i = 0; i < cart.length; i++) {
         if(!result.games[cart[i].nama]) {
-            result.games[cart[i].nama] = 0
+            result.games[cart[i].nama] = []
         }
-        result.games[cart[i].nama]++
+        result.games[cart[i].nama].push(generateResi())
+
     }
 
     result.tagihan = tagihan
