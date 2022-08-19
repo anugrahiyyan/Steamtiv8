@@ -74,12 +74,12 @@ function nambahCart(input) {
 // console.log(nambahCart(3))
 
 
-let cart1 = [
-    { id: 3, nama: 'volaran', harga: 40000 },
-    { id: 5, nama: 'hancurpermen', harga: 100000 },
-    { id: 1, nama: 'hallo', harga: 10000 },
-    { id: 3, nama: 'volaran', harga: 40000 },
-]
+// let cart1 = [
+//     { id: 3, nama: 'volaran', harga: 40000 },
+//     { id: 5, nama: 'hancurpermen', harga: 100000 },
+//     { id: 1, nama: 'hallo', harga: 10000 },
+//     { id: 3, nama: 'volaran', harga: 40000 },
+// ]
 
 
 //input = data id game dari cart yang ingin dihapus
@@ -232,3 +232,5 @@ function generateResi() {
 }
 
 // console.log(generateResi())
+
+
