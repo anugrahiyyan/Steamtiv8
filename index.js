@@ -182,7 +182,7 @@ function filterGame(filter, input) {
 }
 
 
-// console.log(filterGame("genre", "fps"))
+console.log(filterGame("genre", "fps"))
 
 
 // sortType = key data store yang ingin di sort (harga, namaGame, id, etc)
