@@ -233,6 +233,23 @@ function generateResi() {
 
 // console.log(generateResi())
 
+function filterGenre() {
+    let filteredGenre = {}
+    for(let i = 0; i < storeData.length; i++) {
+        if(!filteredGenre[storeData[i].genre]) {
+            filteredGenre[storeData[i].genre] = {}
+        }
+        filteredGenre[storeData[i].genre] = storeData[i]
+        
+    }
+
+    return filteredGenre
+
+}
+
+// console.log(filterGenre())
+
+
 let filtered = []
 
 let filter = () => {
@@ -309,3 +326,7 @@ let render = () => {
       }
     }
 render()
+
+
+
+
