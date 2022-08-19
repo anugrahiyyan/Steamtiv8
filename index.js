@@ -29,28 +29,49 @@ let storeData = [
         harga: 100000,
         genre: 'casual'
     },
+    {
+        id: 6,
+        namaGame: 'Modern Combat 5: Blackout',
+        harga: 600000,
+        genre: 'fps'
+    },
+    {
+        id: 7,
+        namaGame: 'DOTO 3',
+        harga: 800000,
+        genre: 'rts'
+    },
+    {
+        id: 8,
+        namaGame: 'Company of Heroes',
+        harga: 520000,
+        genre: 'rts'
+    },
+    {
+        id: 9,
+        namaGame: 'Ages of Empires',
+        harga: 900000,
+        genre: 'rts'
+    },
 ]
 
 let cart = []
 
 //input = id data game di storeData yang ingin ditambahkan ke cart
-function nambahCart(input, store) {
-    let result = []
 
-    for(let i = 0; i < store.length; i++) {
-        if(input === store[i].id) {
-            result.push({
-                id: store[i].id,
-                nama: store[i].namaGame,
-                harga: store[i].harga
+function nambahCart(input) {
+    for(let i = 0; i < storeData.length; i++) {
+        if(input === storeData[i].id) {
+            cart.push({
+                id: storeData[i].id,
+                nama: storeData[i].namaGame,
+                harga: storeData[i].harga
             })
         }
     }
-
-    return result
 }
 
-// console.log(nambahCart(3, storeData))
+// console.log(nambahCart(3))
 
 
 let cart1 = [
@@ -92,6 +113,15 @@ function hitungHarga(cart) {
 
 
 function checkout(cart) { 
+    if(!cart) {
+        return "invalid data"
+    }
+
+    if(cart.length === 0) {
+        return 'silahkan masukan game ke keranjang terlebih dahulu'
+    }
+
+
     let result = {
         games: {},
         tagihan: 0
@@ -101,9 +131,10 @@ function checkout(cart) {
 
     for(let i = 0; i < cart.length; i++) {
         if(!result.games[cart[i].nama]) {
-            result.games[cart[i].nama] = 0
+            result.games[cart[i].nama] = []
         }
-        result.games[cart[i].nama]++
+        result.games[cart[i].nama].push(generateResi())
+
     }
 
     result.tagihan = tagihan
@@ -112,16 +143,16 @@ function checkout(cart) {
     return result
 }
 
-console.log(checkout(cart1))
+// console.log(checkout(cart1))
 
 
 // input = nama game yang di cari
-function searchGame(input ,store) {
+function searchGame(input) {
     let result = []
 
-    for(let i = 0; i < store.length; i++) {
-        if(input === store[i].namaGame) {
-            result.push(store[i])
+    for(let i = 0; i < storeData.length; i++) {
+        if(input === storeData[i].namaGame) {
+            result.push(storeData[i])
         }
     }
 
@@ -132,17 +163,17 @@ function searchGame(input ,store) {
     return result
 }
 
-// console.log(searchGame('volaran', storeData))
+// console.log(searchGame('volaran'))
 
 
 // filter = key yang ingin di filter 
 // input = apa yang ingin di filter
-function filterGame(filter, input, store) {
+function filterGame(filter, input) {
     let result = []
 
-    for(let i = 0; i < store.length; i++) {
-        if(input === store[i][filter]) {
-            result.push(store[i])
+    for(let i = 0; i < storeData.length; i++) {
+        if(input === storeData[i][filter]) {
+            result.push(storeData[i])
         }
     }
 
@@ -151,40 +182,40 @@ function filterGame(filter, input, store) {
 }
 
 
-// console.log(filterGame("genre", "fps", storeData))
+// console.log(filterGame("genre", "fps"))
 
 
 // sortType = key data store yang ingin di sort (harga, namaGame, id, etc)
 // from = dari low atau high mulaonya
-function sortGame(sortType, from, store) {
+function sortGame(sortType, from) {
     let temp = []
 
     if(from === 'low') {
-        for(let i = 1; i < store.length; i++) {
+        for(let i = 1; i < storeData.length; i++) {
             for(let j = 0; j < i ; j++) {
-                if(store[j][sortType] > store[i][sortType]) {
-                    temp = store[j]
-                    store[j] = store[i]
-                    store[i] = temp
+                if(storeData[j][sortType] > storeData[i][sortType]) {
+                    temp = storeData[j]
+                    storeData[j] = storeData[i]
+                    storeData[i] = temp
                 }
             }
         }
     } else if(from === 'high') {
-        for(let i = 1; i < store.length; i++) {
+        for(let i = 1; i < storeData.length; i++) {
             for(let j = 0; j < i ; j++) {
-                if(store[j][sortType] < store[i][sortType]) {
-                    temp = store[j]
-                    store[j] = store[i]
-                    store[i] = temp
+                if(storeData[j][sortType] < storeData[i][sortType]) {
+                    temp = storeData[j]
+                    storeData[j] = storeData[i]
+                    storeData[i] = temp
                 }
             }
         }
     }
 
-    return store
+    return storeData
 }
 
-// console.log(sortGame('harga', 'low', storeData))
+// console.log(sortGame('harga', 'low'))
 
 
 function generateResi() {
