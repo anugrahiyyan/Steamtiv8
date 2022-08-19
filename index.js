@@ -29,20 +29,45 @@ let storeData = [
         harga: 100000,
         genre: 'casual'
     },
+    {
+        id: 6,
+        namaGame: 'Modern Combat 5: Blackout',
+        harga: 600000,
+        genre: 'fps'
+    },
+    {
+        id: 7,
+        namaGame: 'DOTO 3',
+        harga: 800000,
+        genre: 'rts'
+    },
+    {
+        id: 8,
+        namaGame: 'Company of Heroes',
+        harga: 520000,
+        genre: 'rts'
+    },
+    {
+        id: 9,
+        namaGame: 'Ages of Empires',
+        harga: 900000,
+        genre: 'rts'
+    },
 ]
 
 let cart = []
 
 //input = id data game di storeData yang ingin ditambahkan ke cart
-function nambahCart(input, store) {
+
+function nambahCart(input) {
     let result = []
 
-    for(let i = 0; i < store.length; i++) {
-        if(input === store[i].id) {
-            result.push({
-                id: store[i].id,
-                nama: store[i].namaGame,
-                harga: store[i].harga
+    for(let i = 0; i < storeData.length; i++) {
+        if(input === storeData[i].id) {
+            cart.push({
+                id: storeData[i].id,
+                nama: storeData[i].namaGame,
+                harga: storeData[i].harga
             })
         }
     }
@@ -53,12 +78,12 @@ function nambahCart(input, store) {
 // console.log(nambahCart(3, storeData))
 
 
-let cart1 = [
-    { id: 3, nama: 'volaran', harga: 40000 },
-    { id: 5, nama: 'hancurpermen', harga: 100000 },
-    { id: 1, nama: 'hallo', harga: 10000 },
-    { id: 3, nama: 'volaran', harga: 40000 },
-]
+// let cart1 = [
+//     { id: 3, nama: 'volaran', harga: 40000 },
+//     { id: 5, nama: 'hancurpermen', harga: 100000 },
+//     { id: 1, nama: 'hallo', harga: 10000 },
+//     { id: 3, nama: 'volaran', harga: 40000 },
+// ]
 
 
 //input = data id game dari cart yang ingin dihapus
@@ -92,6 +117,15 @@ function hitungHarga(cart) {
 
 
 function checkout(cart) { 
+    if(!cart) {
+        return "invalid data"
+    }
+
+    if(cart.length === 0) {
+        return 'silahkan masukan game ke keranjang terlebih dahulu'
+    }
+
+
     let result = {
         games: {},
         tagihan: 0
@@ -112,7 +146,7 @@ function checkout(cart) {
     return result
 }
 
-console.log(checkout(cart1))
+// console.log(checkout(cart1))
 
 
 // input = nama game yang di cari
