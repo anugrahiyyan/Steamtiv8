@@ -60,8 +60,6 @@ let cart = []
 //input = id data game di storeData yang ingin ditambahkan ke cart
 
 function nambahCart(input) {
-    let result = []
-
     for(let i = 0; i < storeData.length; i++) {
         if(input === storeData[i].id) {
             cart.push({
@@ -71,8 +69,6 @@ function nambahCart(input) {
             })
         }
     }
-
-    return result
 }
 
 // console.log(nambahCart(3, storeData))
